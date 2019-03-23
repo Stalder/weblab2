@@ -15,16 +15,36 @@
     <title>Лаб 2</title>
   </head>
 
-  <body>
-    <div class="container">
+  <body class="grey darken-4">
+    <div class="container grey lighten-3">
       <!-- Header Row -->
-      <div class="row">
+      <div
+        class="row section teal lighten-4"
+        style="width: 100%; height: 300px"
+      >
         <div class="col s11 offset-s1">
           <h1>Познай силу</h1>
         </div>
       </div>
+      <!-- Parallax -->
+      <div class="parallax-container" style="height: 400px">
+        <div class="parallax">
+          <img
+            src="img/parallax_banner_1.png"
+            style="width: 100%; height: auto"
+          />
+        </div>
+      </div>
+      <!-- Colorful Separator block -->
+      <div class="row section teal lighten-3">
+        <div class="col s12 valign-wrapper">
+          <p class="center-align">
+            Вступай в наш клуб саберфайтинга и выбери свою сторону
+          </p>
+        </div>
+      </div>
       <!-- Three cols row -->
-      <div class="row">
+      <div class="row section">
         <div class="col s12 m6 l4 teal lighten-2">
           <h2>Защищай свет</h2>
         </div>
@@ -36,12 +56,47 @@
         </div>
       </div>
       <!-- Info text row -->
-      <div class="row">
+      <div class="row section">
         <div class="col s8 offset-s2">
           <p>Позвольте присяду вам на уши</p>
         </div>
       </div>
+      <!-- Input fields -->
+      <div class="row section blue-grey lighten-1">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input id="first_name" type="text" class="validate" />
+              <label for="first_name">Ваше имя</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <input id="last_name" type="text" class="validate" />
+              <label for="last_name">Фамилия</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m8">
+              <input id="email" type="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s4 m4">
+              <input id="age" type="number" class="validate" />
+              <label for="age">Возраст</label>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".parallax");
+        var instances = M.Parallax.init(elems);
+      });
+    </script>
   </body>
 </html>
